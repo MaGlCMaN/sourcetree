@@ -1,3 +1,5 @@
+#https://www.codewars.com/kata/convert-pascalcase-string-into-snake-case/train/python
+
 def to_underscore(string):
     s = string
     if s == str(s):
