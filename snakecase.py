@@ -7,9 +7,16 @@ def to_underscore(string):
         num = x % len(string)
         if string[x+1].upper() == i:
             if num + 1 != len(string):
-                s = s[:s.index(i)] + "_" + s[s.index(i):]
+                try:
+                    z = int(i)
+                    z += 0
+                    n = num + 2
+                    s = s[:n] + "_" + s[n:]
+                except ValueError:
+                    s = s[:s.index(i)] + "_" + s[s.index(i):]
 
 
-    string = string.lower()
+    s = s.lower()
+    return s
 
 to_underscore('TestController')
